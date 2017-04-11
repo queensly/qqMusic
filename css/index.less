@@ -1,0 +1,207 @@
+@import "reset";//重置样式
+@import (reference) "public";//index需要依赖public.less 但不需要在浏览器渲染该组件
+html{
+  font-size: 100px;
+}
+html,body,.musicBox{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+//背景图
+.musicBox{
+  position: relative;
+  .musicBg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/poster.jpg") no-repeat center;
+    background-size: cover;
+    -webkit-filter:blur(10px);
+    filter:blur(10px);
+    transform: scale(1.2);
+    z-index: -2;
+    &:after{
+      height: 100%;
+      content: '';
+      display: block;
+      background: rgba(0,0,0,.6);
+      z-index: -1;
+    }
+  }
+}
+.header{
+  height: 1.2rem;
+  padding: .3rem;
+  background: rgba(0,0,0,.2);
+  position: relative;
+  .base{
+    width: 4.5rem;
+    img{
+      width: 1.2rem;
+      height: 1.2rem;
+      display: inline-block;
+      vertical-align: top;
+    }
+    p{
+      display: inline-block;
+      vertical-align: top;
+      span{
+        font-size: .36rem;
+        color: @color-white;
+        display: block;
+        line-height: .6rem;
+      }
+    }
+  }
+  .btn{
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    border: .01rem solid @color-gray;
+    position: absolute;
+    right: .3rem;
+    top: 50%;
+    margin-top: -.45rem;
+    .play{
+      width: .33rem;
+      height: .39rem;
+      display: block;
+      .spriteFn(@y:-3rem);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -.19rem;
+      margin-left: -.17rem;
+      opacity: .5;
+    }
+    .pause{
+      display: block;
+      width: .18rem;
+      height: .3rem;
+      .spriteFn(@y:-3.6rem);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -.09rem;
+      margin-top: -.15rem;
+      opacity: .5;
+      display: none;
+    }
+  }
+}
+.footer{
+  margin: 0 .2rem;
+  height: 3rem;
+  .storage{
+    position: relative;
+    height: .8rem;
+    a{
+      position: absolute;
+      width: .5rem;
+      height: .44rem;
+      display: block;
+      .spriteFn();
+      right:.2rem;
+      top: 50%;
+      margin-top: -.22rem;
+    }
+  }
+  .progress{
+    height: .8rem;
+    line-height: .8rem;
+    width: 100%;
+    position: relative;
+    .current{
+      text-align: center;
+      width: .9rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: .1rem;
+      font-size: .24rem;
+      color: @color-gray;
+    }
+    .duration{
+      text-align: center;
+      width: .9rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: .1rem;
+      font-size: .24rem;
+      color: @color-gray;
+    }
+    .timeLine{
+      width: 4.2rem;
+      height: 0.04rem;
+      background: @color-gray;
+      position: absolute;
+      top:50%;
+      left:50%;
+      margin-top: -0.02rem;
+      margin-left: -2.1rem;
+      text-align: center;
+      span{
+        height: 100%;
+        width: 30%;
+        position: absolute;
+        left: 0;
+        top:0;
+        background: @color-green;
+      }
+    }
+  }
+  .downLoad{
+    width: 4.4rem;
+    height: .9rem;
+    background: @color-green;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: .45rem;
+    position: relative;
+    i{
+      font-style: normal;
+      font-size: .36rem;
+      color: @color-white;
+      display: block;
+      line-height: .9rem;
+      &:after{
+        width: .66rem;
+        height: .66rem;
+        .spriteFn(@y: -6rem);
+        display: block;
+        content: '';
+        position: absolute;
+        left: .11rem;
+        top: 50%;
+        margin-top: -.33rem;
+      }
+    }
+  }
+
+}
+.main{
+  margin: .4rem .2rem;
+  position: relative;
+  overflow: hidden;
+  .lyric{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    p{
+      width: 100%;
+      text-align: center;
+      line-height: .84rem;
+      font-size: .32rem;
+      color: @color-gray;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    p.on{
+      color: @color-green;
+    }
+  }
+}

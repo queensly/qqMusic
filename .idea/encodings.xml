@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/css/reset.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/img/demo.m4a" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/img/poster.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/img/sprite_play.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/less-2.5.3.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/zepto.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lyric.json" charset="UTF-8" />
+  </component>
+</project>

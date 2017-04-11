@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 视口  手机和电脑的相对比例-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <!-- 把rel改为stylesheet/less-->
+    <link rel="stylesheet/less" href="./css/index.less"/>
+</head>
+<body>
+<section class="musicBox">
+    <div class="musicBg"></div>
+    <audio src="img/demo.m4a"></audio>
+    <!--
+    audio中常用的属性
+    autoplay:是否自动播放
+    loop:是否循环
+    currentTime:当前时间
+    duration:总播放时间
+    preload:none 不缓存
+    played:一播放的音频片段
+    paused:是否暂停 true正在播放 false暂停播放
+    ended：是否播放完毕
+    -->
+    <!--
+    audio媒体常用的方法
+    play()
+    -->
+    <header class="header">
+        <div class="base">
+            <img src="img/poster.jpg" alt=""/>
+
+            <p>
+                <span>模特</span>
+                <span>李荣浩</span>
+            </p>
+        </div>
+        <div class="btn">
+            <a href="javascript:;" class="play"></a>
+            <a href="javascript:;" class="pause"></a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="lyric">
+            <p class="on">模特 李荣浩</p>
+
+            <p>此 李荣浩</p>
+
+            <p>曲 李荣浩</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="storage">
+            <a href="javascript:;"></a>
+        </div>
+        <div class="progress">
+            <div class="current">00:00</div>
+            <div class="timeLine"><span class="timeProgress"></span></div>
+            <div class="duration">00:00</div>
+        </div>
+        <div class="downLoad"><i>下载这首歌曲</i></div>
+    </footer>
+</section>
+<!--less负责编译 zepto类似jquery-->
+<script src="js/less-2.5.3.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
